@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course</title>
+            <!-- css  -->
+            <link rel="stylesheet" href="assets/plugins/bootstrap/bootstrap.css">
+            <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css">
+            <link rel="stylesheet" href="assets/plugins/slick-slider/slick.css">
+            <link rel="stylesheet" href="assets/css/style.css">
+            <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+ <!-- Start header -->
+   <header class="header inner page-header header-dashboard">
+    <nav class="navbar navbar-expand-lg navbar-dar">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brnad">
+                <img src="assets/images/riforma.svg" class="img-fluid" alt="life11">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto  ml-auto d-lg-flex">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link  ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="course.html" class="nav-link active">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link  ">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="how-it-work.html" class="nav-link ">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link ">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link ">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown notification_icon">
+                            <a class="btn btn-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             <img src="assets/images/notification.png" alt="msg">
+                            </a>
+                          
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a href="#"><div class="notification_body">
+                                    <div class="notification_title">
+                                        Notification title
+                                    </div>
+                                    <div class="notification_discription">
+                                        Notification sort description. <span> 15m ago</span>
+                                    </div>
+                                    </div></a>
+                        </li>
+                        <li>
+                           <a href="#">
+                            <div class="notification_body">
+                                <div class="notification_title">
+                                    Notification title
+                                </div>
+                                <div class="notification_discription">
+                                    Notification sort description. <span> 15m ago</span>
+                                </div>
+                            </div>
+                           </a>
+                        </li>
+                            </ul>
+                          </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                MyAccount
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item active" href="#">
+                                    <img src="assets/images/dash-dark.png" alt="icon">
+                                <span>
+                                    Dashboard   
+                                </span>    
+                            </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                    <img src="assets/images/edit-dark.png" alt="icon">
+                                <span>Edit Account</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    <img src="assets/images/chat-dark.png" alt="icon">
+                                <span>Chat</span>
+                            </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                    <img src="assets/images/booking-dark.png" alt="icon">
+                                    <span>My Bookings</span>
+                                </a></li>
+                                 <li><a class="dropdown-item" href="#">
+                                    <img src="assets/images/calender-dark.png" alt="icon">
+                                <span>Calendar</span>
+                            </a></li>
+                                <li>
+                                <a class="dropdown-item" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path
+                                            d="M7.5 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H7.5"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M13.332 14.1673L17.4987 10.0007L13.332 5.83398" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M17.5 10H7.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span>Logout</span>
+                                </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+</header>
+<!-- End header -->
+<!-- Start course section -->
+<section class="course_main_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="course_body">
+                    <div class="course_banner">
+                        <img src="assets/images/course.jpg" alt="banner" class="img-fluid">
+                    </div>
+                        <div class="course_description mt-4">
+                           <h6> IGCSE CLASES 1on1</h6>
+                           <p>A course which can help students to enhance their knowledge of all IB students</p>
+                        </div>
+                    <table class="table course_price course_duration">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Price
+                                </th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$20 to $ 45 
+                                    Per hour</td>
+                                    <td>Unlimited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="read-more-btn mt-4">
+                        <a href="course-details.html" class="btn read__more comman_btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course_body">
+                    <div class="course_banner">
+                        <img src="assets/images/course.jpg" alt="banner" class="img-fluid">
+                    </div>
+                        <div class="course_description mt-4">
+                           <h6> IGCSE CLASES 1on1</h6>
+                           <p>A course which can help students to enhance their knowledge of all IB students</p>
+                        </div>
+                    <table class="table course_price course_duration">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Price
+                                </th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$20 to $ 45 
+                                    Per hour</td>
+                                    <td>Unlimited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="read-more-btn mt-4">
+                        <a href="course-details.html" class="btn read__more comman_btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course_body">
+                    <div class="course_banner">
+                        <img src="assets/images/course.jpg" alt="banner" class="img-fluid">
+                    </div>
+                        <div class="course_description mt-4">
+                           <h6> IGCSE CLASES 1on1</h6>
+                           <p>A course which can help students to enhance their knowledge of all IB students</p>
+                        </div>
+                    <table class="table course_price course_duration">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Price
+                                </th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$20 to $ 45 
+                                    Per hour</td>
+                                    <td>Unlimited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="read-more-btn mt-4">
+                        <a href="course-details.html" class="btn read__more comman_btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course_body">
+                    <div class="course_banner">
+                        <img src="assets/images/course.jpg" alt="banner" class="img-fluid">
+                    </div>
+                        <div class="course_description mt-4">
+                           <h6> IGCSE CLASES 1on1</h6>
+                           <p>A course which can help students to enhance their knowledge of all IB students</p>
+                        </div>
+                    <table class="table course_price course_duration">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Price
+                                </th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$20 to $ 45 
+                                    Per hour</td>
+                                    <td>Unlimited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="read-more-btn mt-4">
+                        <a href="course-details.html" class="btn read__more comman_btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course_body">
+                    <div class="course_banner">
+                        <img src="assets/images/course.jpg" alt="banner" class="img-fluid">
+                    </div>
+                        <div class="course_description mt-4">
+                           <h6> IGCSE CLASES 1on1</h6>
+                           <p>A course which can help students to enhance their knowledge of all IB students</p>
+                        </div>
+                    <table class="table course_price course_duration">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Price
+                                </th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$20 to $ 45 
+                                    Per hour</td>
+                                    <td>Unlimited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="read-more-btn mt-4">
+                        <a href="course-details.html" class="btn read__more comman_btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course_body">
+                    <div class="course_banner">
+                        <img src="assets/images/course.jpg" alt="banner" class="img-fluid">
+                    </div>
+                        <div class="course_description mt-4">
+                           <h6> IGCSE CLASES 1on1</h6>
+                           <p>A course which can help students to enhance their knowledge of all IB students</p>
+                        </div>
+                    <table class="table course_price course_duration">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Price
+                                </th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$20 to $ 45 
+                                    Per hour</td>
+                                    <td>Unlimited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="read-more-btn mt-4">
+                        <a href="course-details.html" class="btn read__more comman_btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course_body">
+                    <div class="course_banner">
+                        <img src="assets/images/course.jpg" alt="banner" class="img-fluid">
+                    </div>
+                        <div class="course_description mt-4">
+                           <h6> IGCSE CLASES 1on1</h6>
+                           <p>A course which can help students to enhance their knowledge of all IB students</p>
+                        </div>
+                    <table class="table course_price course_duration">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Price
+                                </th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$20 to $ 45 
+                                    Per hour</td>
+                                    <td>Unlimited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="read-more-btn mt-4">
+                        <a href="course-details.html" class="btn read__more comman_btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course_body">
+                    <div class="course_banner">
+                        <img src="assets/images/course.jpg" alt="banner" class="img-fluid">
+                    </div>
+                        <div class="course_description mt-4">
+                           <h6> IGCSE CLASES 1on1</h6>
+                           <p>A course which can help students to enhance their knowledge of all IB students</p>
+                        </div>
+                    <table class="table course_price course_duration">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Price
+                                </th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$20 to $ 45 
+                                    Per hour</td>
+                                    <td>Unlimited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="read-more-btn mt-4">
+                        <a href="course-details.html" class="btn read__more comman_btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course_body">
+                    <div class="course_banner">
+                        <img src="assets/images/course.jpg" alt="banner" class="img-fluid">
+                    </div>
+                        <div class="course_description mt-4">
+                           <h6> IGCSE CLASES 1on1</h6>
+                           <p>A course which can help students to enhance their knowledge of all IB students</p>
+                        </div>
+                    <table class="table course_price course_duration">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Price
+                                </th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$20 to $ 45 
+                                    Per hour</td>
+                                    <td>Unlimited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="read-more-btn mt-4">
+                        <a href="course-details.html" class="btn read__more comman_btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End course section -->
+<footer class=" footer pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="footer-logo mb-5 ">
+                    <img src="assets/images/riforma.svg" alt="logo" class="img-fluid">
+                </div>
+                <div class="about-riforma">
+                    <p>
+                        7Wiseways is an online tutoring platform with qualified teachers from top IB Schools across the
+                        globe. We provide live
+                        One-on-One classes, which take place in our online classroom using online video chat and a
+                        shared whiteboard. The
+                        teacher and the student can interact with each other through the video chat and write on the
+                        shared whiteboard.
+                    </p>
+                    <p>7Wiseways gives you access to the best teachers in the world, without any constraints on
+                        geography. Once you request a
+                        lesson, we will match you to a highly qualified personal tutor, who will take the first lesson.
+                        Once you are satisfied
+                        with the first lesson, your dedicated academic counselor will chart a detailed academic plan,
+                        tailor-made for you.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="footer-link mt-4">
+                    <h6 class="footer-link-underline">Quick Links :</h6>
+                    <ul class="nav flex-column mt-5">
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Home</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Courses</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">About Us</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">How It Works</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Blogs</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Testimonials</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Become a Tutor</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="footer-link mt-4">
+                    <h6 class="footer-link-underline">Get in Touch :</h6>
+                    <ul class="nav flex-column contact-info mt-5">
+                        <li class="nav-item mb-3">
+                            <a href="tel:(+91 7349732245)">+91 7349732245</a>
+                        </li>
+                        <li class="nav-item mb-3"><a href="mailto:" class="nav-link p-0 ">support@playing11.com</a></li>
+                        <li class="nav-item mb-3">
+                            <ul class="social_icon mt-">
+                                <li><a href="#"><img src="assets/images/facebook.png" alt="facebook"
+                                            class="img-fluid"></a></li>
+                                <li><a href="#"><img src="" alt=""><img src="assets/images/instagram.png"
+                                            alt="instagram" class="img-fluid"></a></li>
+                                <li><a href="#"><img src="" alt=""><img src="assets/images/twitter.png" alt="twitter"
+                                            class="img-fluid"></a></li>
+                                <li><a href="#"><img src="" alt=""><img src="assets/images/linkedin.png" alt="linkedin"
+                                            class="img-fluid"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                </d iv>
+            </div>
+        </div>
+        </div>
+        <div class="footer_bottom-block">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 align-self-center  ">
+                        <ul class="d-flex p-0 mb-0">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms and conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                        <div class="copyright">
+                            <p class="text-white mb-0">Riforma Technologies Pvt. Ltd. ©2021. All rights reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</footer>
+<!-- End Footer -->
+<!-- scripts-->
+<script src="assets/js/jquery-3.6.0.js"></script>
+<script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="assets/plugins/slick-slider/slick.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

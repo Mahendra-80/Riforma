@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+       <!-- css  -->
+       <link rel="stylesheet" href="assets/plugins/bootstrap/bootstrap.css">
+       <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css">
+       <link rel="stylesheet" href="assets/plugins/slick-slider/slick.css">
+       <link rel="stylesheet" href="assets/css/style.css">
+       <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+        <!-- Start login Modal -->
+        <div class="modal fade login_modal" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="staticBackdropLabel">Log In</h5>
+                    <div class="social_login">
+                       <div class="facebook_login">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i><span>Continue with Facebook</span>
+                        </a>
+                       </div>
+                     <div class="google_login">
+                        <a href="#">
+                            <i class="fab fa-google"></i> <span>Continue with Google</span>
+                        </a>
+                     </div>
+                    </div>
+                    <div class="saparater">
+                        <img src="assets/images/separater-sm.png" alt="separater" class="img-fluid ">
+                    </div>
+                    <div class="login_form">
+                        <form action="">
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email address*</label>
+                                <input type="email" class="form-control" id="email" placeholder="">
+                            </div>
+                            <div class="col-12">
+                                <label for="password-field" class="form-label">Password</label>
+                                <div class="pwd_field">
+                                    <input type="password" class="form-control" id="password-field" placeholder="" value="India@12#$^&">
+                                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                            </div>
+                            <div class="forgot_link">
+                                   <label class="control control--checkbox">
+                                    <input type="checkbox" checked="checked">
+                                    <span>Remember me</span>
+                                    <div class="control__indicator"></div>
+                                </label>
+                                    <a href="#"data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#forgot_password"  class="forgot_pwd">Forgot password?</a>
+                            </div>
+                            <div class="signin_btn_block">
+                                <button class="btn btn-primary" type="button">Button</button>
+                            </div>
+                            <div class="Create_account_link text-center">
+                                <span>Don’t have an accunt? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signup" >Create account</a></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  end login modal -->
+    <!-- Start forgot password  -->
+    <div class="modal fade login_modal" id="forgot_password" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="staticBackdropLabel">Forgot Password</h5>
+                    <div class="forgotted_title mb-3">
+                        If you have forgotted your password you can reset
+                        it here.
+                    </div>
+                    <div class="login_form">
+                        <form action="">
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="">
+                            </div>
+
+                            <div class="signin_btn_block">
+                                <button class="btn btn-primary" type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#recover_password">Reset Password</button>
+                            </div>
+                            <div class="signin_btn_block text-center mt-3">
+                                <button class="btn btn-white cancel" type="button">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End forgot password -->
+    <!-- Start Recover Password -->
+    <div class="modal fade login_modal recover_password" id="recover_password" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="staticBackdropLabel">Recover Password</h5>
+                    <div class="forgotted_title mb-3">
+                    To change your password, please fill in the fields below:
+                    </div>
+                    <div class="login_form">
+                        <form action="">
+                        <div class="col-12">
+                            <label for="new_password" class="form-label">Password</label>
+                            <div class="pwd_field">
+                                <input type="password" class="form-control" id="new_password" placeholder="" value="India@12#$^&">
+                                <span toggle="#new_password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="confirm_password" class="form-label">Confirm password</label>
+                            <div class="pwd_field">
+                                <input type="text" class="form-control" id="confirm_password" placeholder="" value="India@12#$^&">
+                                <span toggle="#confirm_password" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            </div>
+                        </div>
+                            <div class="signin_btn_block">
+                                <button class="btn btn-primary" type="button">Reset Password</button>
+                            </div>
+                            <div class="signin_btn_block text-center mt-3">
+                                <button class="btn btn-white cancel" type="button">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Recovere Pasword -->
+    <!-- Start signup modal  -->
+    <div class="modal fade login_modal signup_modal" id="signup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+                        <div class="col-md-6">
+                            <div class="social_login">
+                                <div class="facebook_login">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i><span>Continue with Facebook</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="google_login">
+                                <a href="#">
+                                    <i class="fab fa-google"></i> <span>Continue with Google</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="saparater">
+                            <img src="assets/images/separater.png" alt="separater" class="img-fluid ">
+                        </div>
+                    </div>
+                        <div class="login_form">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="first-name" class="form-label">First Name</label>
+                                        <input type="email" class="form-control" id="first-name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Last-name" class="form-label">Last Name</label>
+                                        <input type="password" class="form-control" id="Last-name">
+                                    </div>
+                                <div class="col-6">
+                                    <label for="email" class="form-label">Email address*</label>
+                                    <input type="email" class="form-control" id="email" placeholder="">
+                                </div>
+                                <div class="col-6">
+                                    <label for="password-field" class="form-label">Password</label>
+                                    <div class="pwd_field">
+                                        <input type="password" class="form-control" id="password-field1" placeholder="" value="India@12#$^&">
+                                        <span toggle="#password-field1" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Phone</label>
+                                   <div class="number_with_code">
+                                    <select class="form-select form-control" id="autoSizingSelect">
+                                        <option selected>IN +91</option>
+                                        <option value="1">IN +912</option>
+                                        <option value="2">IN +913</option>
+                                        <option value="3">IN +914</option>
+                                    </select>
+                                    <input type="tel" class="form-control" id="inputEmail4">
+                                   </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPassword4" class="form-label">Country</label>
+                                    <select class="form-select form-control" id="autoSizingSelect">
+                                        <option selected>India</option>
+                                        <option value="1">Japan</option>
+                                        <option value="2">Indonesia</option>
+                                        <option value="3">Iraq</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Last-name" class="form-label">Last Name</label>
+                                    <input type="password" class="form-control" id="Last-name">
+                                </div>
+                                <div class="col-md-6"></div>
+                               <div class="col-md-6">
+                                <div class="forgot_link t_and_c">
+                                    <label class="control control--checkbox">
+                                        <input type="checkbox">
+                                        <span>I agree to the terms & conditions <a href="#">View terms of
+                                            use</a>.</span>
+                                        <div class="control__indicator"></div>
+                                    </label>
+                                </div>
+                               </div>
+                                <div class="col-md-6">
+                                    <div class="forgot_link t_and_c">
+                                    <label class="control control--checkbox">
+                                        <input type="checkbox" checked="checked">
+                                        <span>I agree to the terms & conditions <a href="#">View terms of
+                                        use</a>.</span>
+                                        <div class="control__indicator"></div>
+                                    </label>
+                                    </div>
+                                </div>
+                                <div class="signin_btn_block text-center">
+                                    <button class="btn btn-primary" type="button">Button</button>
+                                </div>
+                                <div class="Create_account_link text-center">
+                                    <span>Already have an accunt? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#login">Sign In</a></span>
+                                </div>
+                            </form>
+                        </div>
+                        </div>      
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End signup modal -->
+     <!-- Start header -->
+     <header class="header inner page-header header-dashboard">
+        <nav class="navbar navbar-expand-lg navbar-dar">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brnad">
+                    <img src="assets/images/riforma.svg" class="img-fluid" alt="life11">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto  ml-auto d-lg-flex">
+                        <li class="nav-item">
+                            <a href="home.html" class="nav-link  ">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="course.html" class="nav-link ">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link  ">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="how-it-work.html" class="nav-link ">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link ">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact-us.html" class="nav-link active">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="logon-btn">
+                                <a class="btn" href="#" data-bs-toggle="modal" data-bs-target="#login">Login
+                                </a>
+                            </div>
+                        </li>
+    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    
+    </header>
+    <!-- End header -->
+    <!-- Start contact us  -->
+    <section class="contact_us_page">
+        <div class="container">
+            <div class="row">
+                <div class="section_heading text-center">
+                    <h3>Contact Us</h3>
+                    <p>We’d love to hear from you</p>
+                </div>
+                <div class="col-lg-6">
+                    <form class=" g-3">
+                        <div class="col-md-12 mb-3">
+                          <label for="full_name" class="form-label">Full Name</label>
+                          <input type="text" class="form-control" id="full_name" placeholder="name">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="password" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control contact_message" id="message" rows="6"></textarea>
+                        </div>
+                        <button type="button" class="btn comman_btn">Send Message</button>
+                        </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact_via">
+                        <div class="detail_via_body">
+                            <div class="whatsapp_icon">
+                                <img src="assets/images/whatsapp.png" alt="whatsapp" class="img_fluid">
+                            </div>
+                            <div class="contact_details">
+                                <div class="detail_title">
+                                    Whatsapp
+                                </div>
+                                <a href="tel:+91-7349732245" class="">+91-7349732245</a href="tel:">
+                            </div>
+                        </div>
+                        <div class="detail_via_body">
+                            <div class="whatsapp_icon">
+                                <img src="assets/images/email.png" alt="email" class="img_fluid">
+                            </div>
+                            <div class="contact_details">
+                                <div class="detail_title">
+                                    Email
+                                </div>
+                                <a href="mailto:">Help@riforma.com</a>
+                            </div>
+                        </div>
+                        <div class="detail_via_body">
+                            <div class="whatsapp_icon">
+                                <img src="assets/images/location.png" alt="location" class="img_fluid">
+                            </div>
+                            <div class="contact_details">
+                                <div class="detail_title">
+                                    Address
+                                </div>
+                                <span>1194, 1 St D Main, L.N.Colony,<br>
+                                    Bangalore, Karnataka, 560022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End contact us -->
+<!-- Start map section -->
+<section class="map_block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="compnay_location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62207.90915466625!2d77.48677058957583!3d12.972214750439292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d63686bfb61%3A0x35642009afc815dd!2s194%2C%201st%20Main%20Rd!5e0!3m2!1sen!2sin!4v1661927420770!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>  
+        </div>
+    </div>
+</section>
+<!-- End map section -->
+     <!-- Start Footer -->
+     <footer class=" footer pt-5">
+        <div class="container">
+            <div class="row">       
+                <div class="col-md-4">
+                    <div class="footer-logo mb-5 ">
+                        <img src="assets/images/riforma.svg" alt="logo" class="img-fluid">
+                    </div> 
+                    <div class="about-riforma">
+                        <p >
+                            7Wiseways is an online tutoring platform with qualified teachers from top IB Schools across the globe. We provide live
+                            One-on-One classes, which take place in our online classroom using online video chat and a shared whiteboard. The
+                            teacher and the student can interact with each other through the video chat and write on the shared whiteboard.
+                        </p>
+                        <p>7Wiseways gives you access to the best teachers in the world, without any constraints on geography. Once you request a
+                        lesson, we will match you to a highly qualified personal tutor, who will take the first lesson. Once you are satisfied
+                        with the first lesson, your dedicated academic counselor will chart a detailed academic plan, tailor-made for you.</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="footer-link mt-4">
+                        <h6 class="footer-link-underline">Quick Links :</h6>
+                        <ul class="nav flex-column mt-5">
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Home</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Courses</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">About Us</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">How It Works</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Blogs</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Testimonials</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Become a Tutor</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="footer-link mt-4">
+                        <h6 class="footer-link-underline">Get in Touch :</h6>
+                        <ul class="nav flex-column contact-info mt-5">
+                            <li class="nav-item mb-3">
+                                <a href="tel:(+91 7349732245)">+91 7349732245</a>
+                            </li>
+                            <li class="nav-item mb-3"><a href="mailto:" class="nav-link p-0 ">support@playing11.com</a></li>
+                            <li class="nav-item mb-3">
+                                <ul class="social_icon mt-">
+                                   <li><a href="#"><img src="assets/images/facebook.png" alt="facebook" class="img-fluid"></a></li>
+                                   <li><a href="#"><img src="" alt=""><img src="assets/images/instagram.png" alt="instagram" class="img-fluid"></a></li>
+                                   <li><a href="#"><img src="" alt=""><img src="assets/images/twitter.png" alt="twitter" class="img-fluid"></a></li>
+                                   <li><a href="#"><img src="" alt=""><img src="assets/images/linkedin.png" alt="linkedin" class="img-fluid"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </d iv> 
+            </div>
+        </div>
+        <div class="footer_bottom-block">
+            <div class="container">
+            <div class="row">
+              
+                <div class="col-md-6 align-self-center  ">
+                    <ul class="d-flex p-0 mb-0">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="copyright">
+                        <p class="text-white mb-0">Riforma Technologies Pvt. Ltd. ©2021. All rights reserved</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+     <!-- scripts-->
+     <script src="assets/js/jquery-3.6.0.js"></script>
+     <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+ <script src="assets/plugins/slick-slider/slick.min.js"></script>
+ <script src="assets/js/script.js"></script>
+</body>
+</html>

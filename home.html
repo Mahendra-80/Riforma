@@ -1,0 +1,1311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riforma</title>
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/plugins/slick-slider/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Start login Modal -->
+    <div class="modal fade login_modal" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="staticBackdropLabel">Log In</h5>
+                    <div class="social_login">
+                       <div class="facebook_login">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i><span>Continue with Facebook</span>
+                        </a>
+                       </div>
+                     <div class="google_login">
+                        <a href="#">
+                            <i class="fab fa-google"></i> <span>Continue with Google</span>
+                        </a>
+                     </div>
+                    </div>
+                    <div class="saparater">
+                        <img src="assets/images/separater-sm.png" alt="separater" class="img-fluid ">
+                    </div>
+                    <div class="login_form">
+                        <form action="">
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email address*</label>
+                                <input type="email" class="form-control" id="email" placeholder="">
+                            </div>
+                            <div class="col-12">
+                                <label for="password-field" class="form-label">Password</label>
+                                <div class="pwd_field">
+                                    <input type="password" class="form-control" id="password-field" placeholder="" value="India@12#$^&">
+                                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                            </div>
+                            <div class="forgot_link">
+                                   <label class="control control--checkbox">
+                                    <input type="checkbox" checked="checked">
+                                    <span>Remember me</span>
+                                    <div class="control__indicator"></div>
+                                </label>
+                                    <a href="#"data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#forgot_password"  class="forgot_pwd">Forgot password?</a>
+                            </div>
+                            <div class="signin_btn_block">
+                                <button class="btn btn-primary" type="button">Button</button>
+                            </div>
+                            <div class="Create_account_link text-center">
+                                <span>Don’t have an accunt? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signup" >Create account</a></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  end login modal -->
+    <!-- Start forgot password  -->
+    <div class="modal fade login_modal" id="forgot_password" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="staticBackdropLabel">Forgot Password</h5>
+                    <div class="forgotted_title mb-3">
+                        If you have forgotted your password you can reset
+                        it here.
+                    </div>
+                    <div class="login_form">
+                        <form action="">
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="">
+                            </div>
+
+                            <div class="signin_btn_block">
+                                <button class="btn btn-primary" type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#recover_password">Reset Password</button>
+                            </div>
+                            <div class="signin_btn_block text-center mt-3">
+                                <button class="btn btn-white cancel" type="button">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End forgot password -->
+    <!-- Start Recover Password -->
+    <div class="modal fade login_modal recover_password" id="recover_password" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="staticBackdropLabel">Recover Password</h5>
+                    <div class="forgotted_title mb-3">
+                    To change your password, please fill in the fields below:
+                    </div>
+                    <div class="login_form">
+                        <form action="">
+                        <div class="col-12">
+                            <label for="new_password" class="form-label">Password</label>
+                            <div class="pwd_field">
+                                <input type="password" class="form-control" id="new_password" placeholder="" value="India@12#$^&">
+                                <span toggle="#new_password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="confirm_password" class="form-label">Confirm password</label>
+                            <div class="pwd_field">
+                                <input type="text" class="form-control" id="confirm_password" placeholder="" value="India@12#$^&">
+                                <span toggle="#confirm_password" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                            </div>
+                        </div>
+                            <div class="signin_btn_block">
+                                <button class="btn btn-primary" type="button">Reset Password</button>
+                            </div>
+                            <div class="signin_btn_block text-center mt-3">
+                                <button class="btn btn-white cancel" type="button">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Recovere Pasword -->
+    <!-- Start signup modal  -->
+    <div class="modal fade login_modal signup_modal" id="signup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+                        <div class="col-md-6">
+                            <div class="social_login">
+                                <div class="facebook_login">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i><span>Continue with Facebook</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="google_login">
+                                <a href="#">
+                                    <i class="fab fa-google"></i> <span>Continue with Google</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="saparater">
+                            <img src="assets/images/separater.png" alt="separater" class="img-fluid ">
+                        </div>
+                    </div>
+                        <div class="login_form">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="first-name" class="form-label">First Name</label>
+                                        <input type="email" class="form-control" id="first-name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Last-name" class="form-label">Last Name</label>
+                                        <input type="password" class="form-control" id="Last-name">
+                                    </div>
+                                <div class="col-6">
+                                    <label for="email" class="form-label">Email address*</label>
+                                    <input type="email" class="form-control" id="email" placeholder="">
+                                </div>
+                                <div class="col-6">
+                                    <label for="password-field" class="form-label">Password</label>
+                                    <div class="pwd_field">
+                                        <input type="password" class="form-control" id="password-field1" placeholder="" value="India@12#$^&">
+                                        <span toggle="#password-field1" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Phone</label>
+                                   <div class="number_with_code">
+                                    <select class="form-select form-control" id="autoSizingSelect">
+                                        <option selected>IN +91</option>
+                                        <option value="1">IN +912</option>
+                                        <option value="2">IN +913</option>
+                                        <option value="3">IN +914</option>
+                                    </select>
+                                    <input type="tel" class="form-control" id="inputEmail4">
+                                   </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPassword4" class="form-label">Country</label>
+                                    <select class="form-select form-control" id="autoSizingSelect">
+                                        <option selected>India</option>
+                                        <option value="1">Japan</option>
+                                        <option value="2">Indonesia</option>
+                                        <option value="3">Iraq</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Last-name" class="form-label">Last Name</label>
+                                    <input type="password" class="form-control" id="Last-name">
+                                </div>
+                                <div class="col-md-6"></div>
+                               <div class="col-md-6">
+                                <div class="forgot_link t_and_c">
+                                    <label class="control control--checkbox">
+                                        <input type="checkbox">
+                                        <span>I agree to the terms & conditions <a href="#">View terms of
+                                            use</a>.</span>
+                                        <div class="control__indicator"></div>
+                                    </label>
+                                </div>
+                               </div>
+                                <div class="col-md-6">
+                                    <div class="forgot_link t_and_c">
+                                    <label class="control control--checkbox">
+                                        <input type="checkbox" checked="checked">
+                                        <span>I agree to the terms & conditions <a href="#">View terms of
+                                        use</a>.</span>
+                                        <div class="control__indicator"></div>
+                                    </label>
+                                    </div>
+                                </div>
+                                <div class="signin_btn_block text-center">
+                                    <button class="btn btn-primary" type="button">Button</button>
+                                </div>
+                                <div class="Create_account_link text-center">
+                                    <span>Already have an accunt? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#login">Sign In</a></span>
+                                </div>
+                            </form>
+                        </div>
+                        </div>      
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End signup modal -->
+    <!-- Start header -->
+    <header class="header inner page-header">
+        <nav class="navbar navbar-expand-lg navbar-dar">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brnad">
+                    <img src="assets/images/riforma.svg" class="img-fluid" alt="life11">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto  ml-auto d-lg-flex">
+                        <li class="nav-item">
+                            <a href="home.html" class="nav-link active ">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="course.html" class="nav-link ">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link  ">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link ">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link ">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact-us.html" class="nav-link ">Contact Us</a>
+                        </li>
+                          <li class="nav-item">
+                            <div class="dropdown notification_icon">
+                                <a class="btn btn-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                 <img src="assets/images/notification-white.png" alt="msg">
+                                </a>
+                              
+                                <ul class="dropdown-menu">
+                                  <li>
+                                    <a href="#"><div class="notification_body">
+                                        <div class="notification_title">
+                                            Notification title
+                                        </div>
+                                        <div class="notification_discription">
+                                            Notification sort description. <span> 15m ago</span>
+                                        </div>
+                                        </div></a>
+                            </li>
+                            <li>
+                               <a href="#">
+                                <div class="notification_body">
+                                    <div class="notification_title">
+                                        Notification title
+                                    </div>
+                                    <div class="notification_discription">
+                                        Notification sort description. <span> 15m ago</span>
+                                    </div>
+                                </div>
+                               </a>
+                            </li>
+                                </ul>
+                              </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="logon-btn">
+                                <a class="btn" href="#" data-bs-toggle="modal" data-bs-target="#login">Login
+                                </a>
+                            </div>
+                        </li>
+    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+      
+    </header>
+    <!-- End header -->
+    <!-- Start hero section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-slider">
+               <div class="item">
+                    <div class="row">
+                        <div class="col-lg-6 align-self-center">
+                            <div class="hero-content">
+                                <h1><span>1on1</span> Live tutoring Services<br> for IGCSE, AS/A Levels,<br> IBMYP and IBDP</h1>
+                                <a href="#"  class="demo-class btn">Request Demo class</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hero-banner">
+                                <img src="assets/images/hero-banner.png" alt="banner" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-lg-6 align-self-center">
+                            <div class="hero-content">
+                                <h1><span>1on1</span> Live tutoring Services<br> for IGCSE, AS/A Levels,<br> IBMYP and IBDP</h1>
+                                <a href="#" class="demo-class">Request Demo class</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hero-banner">
+                                <img src="assets/images/hero-banner.png" alt="banner" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End hero section  -->
+    <!-- Start Course  -->
+   
+        <div class="container">
+            <div class="course">
+                <div class="row">
+                    <div class="section-title text-center">
+                        <h6 class="title">Courses</h6>
+                    </div>
+                    <div class="course_main">
+                        <div class="course_body">
+                            <div  class="course_banner">
+                                <img src="assets/images/igcse_banner.png" alt="banner" class="img-fluid">
+                                <div class="course_description">
+                                    IGCSE CLASES
+                                    1on1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course_body">
+                            <div class="course_banner">
+                                <img src="assets/images/igcse_banner.png" alt="banner" class="img-fluid">
+                                <div class="course_description">
+                                Pre-IB Summer Crash Course
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course_body">
+                            <div class="course_banner">
+                                <img src="assets/images/igcse_banner.png" alt="banner" class="img-fluid">
+                                <div class="course_description">
+                                    IB Summer / Winter Crash Course
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course_body">
+                            <div class="course_banner">
+                                <img src="assets/images/igcse_banner.png" alt="banner" class="img-fluid">
+                                <div class="course_description">
+                                    IGCSE Crash Course
+                                    and Test Series in Science
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course_body">
+                            <div class="course_banner">
+                                <img src="assets/images/igcse_banner.png" alt="banner" class="img-fluid">
+                                <div class="course_description">
+                                    IB Summer / Winter Crash Course
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- End Course -->
+    <!-- Start inspired student -->
+    <section class="inspired_students">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="inspired_results">
+                        <h6>Inspired students</h6>
+                        <h2 class="mb-3">Inspired results</h2>
+                        <p>Our results reflect the passion, hardwork and efforts of our students and teachers.</p>
+                       <div class="_btn_block">
+                        <a href="#" class="btn explore_courses" >
+                            Explore courses
+                        </a>
+                        <a href="#" class="btn view_courses" >View our results</a>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="inspired_banner">
+                        <img src="assets/images/results_banner.png" alt="banner" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="_course_category">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link " id="all-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+                                    role="tab" aria-controls="home-tab-pane" aria-selected="false">All</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="IIT-JEE-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+                                    role="tab" aria-controls="profile-tab-pane" aria-selected="false">IIT JEE</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="NEET-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button"
+                                    role="tab" aria-controls="contact-tab-pane" aria-selected="false">NEET</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tenth" data-bs-toggle="tab" data-bs-target="#tenth-tab-pane"
+                                    type="button" role="tab" aria-controls="tenth-tab-pane" aria-selected="false">10th Board</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="twelveth" data-bs-toggle="tab" data-bs-target="#twelveth-tab-panee" type="button"
+                                    role="tab" aria-controls="twelveth-tab-panee" aria-selected="true">12th Board</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link " id="ntse" data-bs-toggle="tab" data-bs-target="#ntse-tab-panee"
+                                    type="button" role="tab" aria-controls="ntse-tab-panee" aria-selected="false">NTSE</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link " id="olympaid" data-bs-toggle="tab" data-bs-target="#olympaid-tab-panee"
+                                    type="button" role="tab" aria-controls="olympaid-tab-panee" aria-selected="false">Olympaid</button>
+                            </li>
+                          
+                        </ul>
+                        <div class="tab-content text-center mt-4 pt-2" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                <div class="result_category">
+                                    <div class="category_title">
+                                        Oustanding Results in
+                                        <span>10th Bords 2022</span>
+                                    </div>
+                                   <div class="_toper_list_main d-flex">
+                                    <div class="_toper_list_body">
+                                        <div class="toper_list">
+                                            <div class="toper_pic">
+                                                <img src="assets/images/toper.jpg" alt="student" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="_percentage">
+                                            99.8%
+                                        </div>
+                                        <div class="student__name">
+                                            <div class="first_name">Shreya</div>
+                                            <div class="last_name">
+                                                Nigam
+                                            </div>
+                                            <div class="exam_board">
+                                                CBSE Board
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"><img src="assets/images/results.png" alt="results" class="img-fluid">
+                            </div>
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"><img src="assets/images/results.png" alt="results" class="img-fluid">
+                            </div>
+                            <div class="tab-pane fade" id="tenth-tab-pane" role="tabpanel" aria-labelledby="tenth" tabindex="0"><img src="assets/images/results.png" alt="results" class="img-fluid"></div>
+                            <div class="tab-pane fade" id="twelveth-tab-panee" role="tabpanel" aria-labelledby="twelveth    " tabindex="0"><img
+                                    src="assets/images/results.png" alt="results" class="img-fluid"></div>
+                            <div class="tab-pane fade" id="ntse-tab-panee" role="tabpanel" aria-labelledby="ntse" tabindex="0"><img
+                                    src="assets/images/results.png" alt="results" class="img-fluid"></div>
+                            <div class="tab-pane fade" id="olympaid-tab-panee" role="tabpanel" aria-labelledby="olympaid" tabindex="0"><img
+                                    src="assets/images/results.png" alt="results" class="img-fluid"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End inspired student -->
+    <!-- Start Standardised Courses -->
+    <section class="standard_courses">
+        <div class="container">
+            <div class="row">
+                <div class="section-heading mb-5 text-center">
+                    <h2>Standardised Courses</h2>
+                </div>
+                <div class="col-lg-8">
+                    <div class="_standard_course_main">
+                        <div class="_course_body">
+                            <div class="_body_inner">
+                                <div class="_course_icon">
+                                    <img src="assets/images/ibdp.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="_course_content">
+                                    <h6>IBDP</h6>
+                                    <ul class="mb-4">
+                                        <li>Maths AA</li>
+                                        <li>Maths AI</li>
+                                        <li>Physics</li>
+                                        <li>Biology </li>
+                                    </ul>
+                                    <a href="#" class="btn" >Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_course_body">
+                            <div class="_body_inner">
+                                <div class="_course_icon">
+                                    <img src="assets/images/igcse.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="_course_content">
+                                    <h6>IGCSE/GCSE</h6>
+                                    <ul class="mb-4">
+                                        <li>Maths AA</li>
+                                        <li>Maths AI</li>
+                                        <li>Physics</li>
+                                        <li>Biology </li>
+                                    </ul>
+                                    <a href="#" class="btn" >Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_course_body">
+                            <div class="_body_inner">
+                                <div class="_course_icon">
+                                    <img src="assets/images/a_level.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="_course_content">
+                                    <h6>AS and A Levels</h6>
+                                    <ul class="mb-4">
+                                        <li>Maths AA</li>
+                                        <li>Maths AI</li>
+                                        <li>Physics</li>
+                                        <li>Biology </li>
+                                    </ul>
+                                    <a href="#" class="btn" >Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_course_body">
+                            <div class="_body_inner">
+                                <div class="_course_icon">
+                                    <img src="assets/images/ibdp.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="_course_content">
+                                    <h6>IBMYP</h6>
+                                    <ul class="mb-4">
+                                        <li>Maths AA</li>
+                                        <li>Maths AI</li>
+                                        <li>Physics</li>
+                                        <li>Biology </li>
+                                    </ul>
+                                    <a href="#" class="btn" >Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="_course_right_block">
+                        <h2>445 x 476</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Standardised Courses -->
+
+    <!-- HOW TO START -->
+    <section class="hw_to_start">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="_feature">
+                        <div class="section_heading mb-5">
+                            <div class="sub-heading">
+                                <h6>HOW TO START</h6>
+                            </div>
+                            <h2>Explore Thousands
+                            of Creative Classes</h2>
+                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries</p>
+                        </div>
+                        <div class="__features">
+                            <div class="_feature_icon">
+                                <img src="assets/images/tick_icon.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="_feature_content">
+                                <h6>Create an Riforma account</h6>
+                            </div>
+                        </div>
+                        <div class="__features">
+                            <div class="_feature_icon">
+                                <img src="assets/images/tick_icon.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="_feature_content">
+                                <h6>Choose Your Perfect Courses</h6>
+                            </div>
+                        </div>
+                        <div class="__features">
+                            <div class="_feature_icon">
+                                <img src="assets/images/tick_icon.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="_feature_content">
+                                <h6>Request for schedule the class</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="hw_banner">
+                        <img src="assets/images/hw-to-banner.png" alt="banner" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HOW TO START -->
+    <!-- Start demo class -->
+    <section class="Free_demo">
+        <div class="container">
+            <div class="row">
+                    <div class="section_heading">
+                        <h6>Free Demo</h6>
+                    </div>
+                    <div class="col-md-6 align-self-end">
+                        <div class="request_for_demo">
+                            <h2>Book your Free Demo
+                            session</h2>
+                            To Request for a class, please fill out the information below.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/images/demo_banner.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="select_category">
+                        <div class="select_grade mt-4">
+                            <ul>
+                                <li class="grade d-flex align-items-center">
+                                <div class="icon">
+                                    <img src="assets/images/grade_icon.png" alt="grade" class="img-fluid">
+                                </div>
+                                <div class="__title">
+                                    Select Your
+                                    <span>Grade</span>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth" >
+                                        <label class="form-check-label" for="fiveth">
+                                            5th 
+                                        </label>
+                                    </div>
+                                </li>
+                                <li> <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth" checked>
+                                        <label class="form-check-label" for="fiveth">
+                                        6th
+                                        </label>
+                                    </div></li>
+                                <li> <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth" >
+                                        <label class="form-check-label" for="fiveth">
+                                        7th
+                                        </label>
+                                    </div></li>
+                                <li> <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth" >
+                                        <label class="form-check-label" for="fiveth">
+                                        8th
+                                        </label>
+                                    </div></li>
+                                <li> <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth" >
+                                        <label class="form-check-label" for="fiveth">
+                                        9th
+                                        </label>
+                                    </div></li>
+                                <li> <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth" >
+                                        <label class="form-check-label" for="fiveth">
+                                        10th
+                                        </label>
+                                    </div></li>
+                                <li> <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth" >
+                                        <label class="form-check-label" for="fiveth">
+                                        11th
+                                        </label>
+                                    </div></li>
+                                <li> <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth" >
+                                        <label class="form-check-label" for="fiveth">
+                                        12th
+                                        </label>
+                                    </div></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="select_board mt-4">
+                            <ul>
+                                <li class="grade d-flex align-items-center">
+                                    <div class="icon">
+                                        <img src="assets/images/grade_icon.png" alt="grade" class="img-fluid">
+                                    </div>
+                                    <div class="__title">
+                                        Select Your
+                                        <span>Grade</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth">
+                                        <label class="form-check-label" for="fiveth">
+                                            5th
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth" checked>
+                                        <label class="form-check-label" for="fiveth">
+                                            6th
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth">
+                                        <label class="form-check-label" for="fiveth">
+                                            7th
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth">
+                                        <label class="form-check-label" for="fiveth">
+                                            8th
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth">
+                                        <label class="form-check-label" for="fiveth">
+                                            9th
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth">
+                                        <label class="form-check-label" for="fiveth">
+                                            10th
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth">
+                                        <label class="form-check-label" for="fiveth">
+                                            11th
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check grade_list">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="fiveth">
+                                        <label class="form-check-label" for="fiveth">
+                                            12th
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=""></div> -->
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- End demo class -->
+    <!-- Start live classes -->
+    <section class="live_classes">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="section_heading text-center mb-5">
+                    <h6>LIVE CLASSES</h6>
+                    <h2>HD Quality Video, Audio <br>
+                    & Live Classes</h2>
+                </div>
+                <div class="live_class_banner text-center">
+                    <img src="assets/images/live_classes-banner.png" alt="live classes" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End live classes -->
+    <!-- Start join with us-->
+    <section class="join_with_us">
+        <div class="container">
+            <div class="row">
+                <div class="section_heading text-center">
+                    <h6>JOIN WITH US</h6>
+                    <h2 class="mb-5">Which One is Suitable For You?</h2>
+                </div>
+                <div class="col-lg-6">
+                    <div class="Learn_here">
+                        <div class="learn_left_block">
+                            <h6>Do you want to<br>
+                            <span>Learn</span> here?</h6>
+                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries</p>
+                            <a href="#">
+                                Join Now!
+                            </a>
+                        </div>
+                        <div class="learn_right_block">
+                            <img src="assets/images/learn-banner.png" alt="banner" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="teach_here">
+                        <div class="teach_left_block">
+                            <h6>Do you want to<br>
+                                <span>Teach</span> here?
+                            </h6>
+                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries</p>
+                            <a href="#">
+                                Join Now!
+                            </a>
+                        </div>
+                        <div class="teach_right_block">
+                            <img src="assets/images/teach_banner.png" alt="banner" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End join with us -->
+    <!-- Start Why choose us -->
+    <section class="wy-choose">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="_feature">
+                        <div class="section_heading mb-5">
+                            <div class="sub-heading">
+                                <h6>WHY CHOOSE US</h6>
+                            </div>
+                            <h2>Why You Choose Our
+                            Riforma Online learning</h2>
+                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries</p>
+                        </div>
+                        <div class="__features">
+                            <div class="_feature_icon">
+                                <img src="assets/images/tick_icon.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="_feature_content">
+                                <h6>Highly Skilled Teachers</h6>
+                                <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industr</p>
+                            </div>
+                        </div>
+                        <div class="__features">
+                            <div class="_feature_icon">
+                                <img src="assets/images/tick_icon.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="_feature_content">
+                                <h6>Flexibility of Classes</h6>
+                                <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industr</p>
+                            </div>
+                        </div>
+                        <div class="__features">
+                            <div class="_feature_icon">
+                                <img src="assets/images/tick_icon.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="_feature_content">
+                                <h6>High Quality HD Video</h6>
+                                <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="wy_banner">
+                        <img src="assets/images/wy-banner.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Why choose us -->
+
+    <!-- Start Blog section -->
+    <section class="blog">
+        <div class="container">
+            <div class="row">
+                <div class="section-heading text-center">
+                    <h2>Our Latest Blog</h2>
+                </div>
+                <div class="_blog_slider">
+                    <div class="items">
+                        <div class="_slider-body">
+                            <div class="_blog-banner">
+                                <img src="assets/images/blog.jpg" alt="banner" class="img-fluid">
+                            </div>
+                            <div class="_blog-summery">
+                                <div class="_blog-date">
+                                    July 20, 2022
+                                </div>
+                                <div class="_blog_discription">
+                                    IBDP extended essay tips
+                                </div>
+                                <hr class="card_separater">
+                                <div class="watch_list">
+                                    <div class="_views_comments">
+                                        <a href="#">
+                                            <i class="fas fa-eye"></i>
+                                            <span class="_views_counts">7</span>
+                                        </a>
+                                        <a href="#">
+                                        <i class="fas fa-comment-alt"></i>
+                                            <span>4</span>
+                                        </a>
+                                    </div>
+                                    <div class="wishlist">
+                                        <a href="">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="_slider-body">
+                            <div class="_blog-banner">
+                                <img src="assets/images/blog_1.jpg" alt="banner" class="img-fluid">
+                            </div>
+                            <div class="_blog-summery">
+                                <div class="_blog-date">
+                                    July 20, 2022
+                                </div>
+                                <div class="_blog_discription">
+                                    IBDP extended essay tips
+                                </div>
+                                <hr class="card_separater">
+                                <div class="watch_list">
+                                    <div class="_views_comments">
+                                        <a href="#">
+                                            <i class="fas fa-eye"></i>
+                                            <span class="_views_counts">7</span>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fas fa-comment-alt"></i>
+                                            <span>4</span>
+                                        </a>
+                                    </div>
+                                    <div class="wishlist">
+                                        <a href="">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="_slider-body">
+                            <div class="_blog-banner">
+                                <img src="assets/images/blog.jpg" alt="banner" class="img-fluid">
+                            </div>
+                            <div class="_blog-summery">
+                                <div class="_blog-date">
+                                    July 20, 2022
+                                </div>
+                                <div class="_blog_discription">
+                                    IBDP extended essay tips
+                                </div>
+                                <hr class="card_separater">
+                                <div class="watch_list">
+                                    <div class="_views_comments">
+                                        <a href="#">
+                                            <i class="fas fa-eye"></i>
+                                            <span class="_views_counts">7</span>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fas fa-comment-alt"></i>
+                                            <span>4</span>
+                                        </a>
+                                    </div>
+                                    <div class="wishlist">
+                                        <a href="">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="_slider-body">
+                            <div class="_blog-banner">
+                                <img src="assets/images/blog_1.jpg" alt="banner" class="img-fluid">
+                            </div>
+                            <div class="_blog-summery">
+                                <div class="_blog-date">
+                                    July 20, 2022
+                                </div>
+                                <div class="_blog_discription">
+                                    IBDP extended essay tips
+                                </div>
+                                <hr class="card_separater">
+                                <div class="watch_list">
+                                    <div class="_views_comments">
+                                        <a href="#">
+                                            <i class="fas fa-eye"></i>
+                                            <span class="_views_counts">7</span>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fas fa-comment-alt"></i>
+                                            <span>4</span>
+                                        </a>
+                                    </div>
+                                    <div class="wishlist">
+                                        <a href="">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Blog section -->
+    <!-- Start testimonial -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="section-heading text-center">
+                    <h6>TESTIMONIAL</h6>
+                    <h2>What Our Happy Users Says</h2>
+                </div>
+                <div class="testimonial_slider">
+                    <div class="items">
+                        <div class="testimonial-card mt-5">
+                            <div class="student_details mb-4">
+                                <div class="student_img">
+                                    <img src="assets/images/student.jpg" alt="student" class="img-fluid">
+                                </div>
+                                <div class="student_name">
+                                    <div class="S_name">
+                                        Prisha, srivastav
+                                    </div>
+                                    <div class="S_location">
+                                        Jaipur, Rajasthan
+                                    </div>
+                                    <div class="S_percent">
+                                        98.4% CBSE XII
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="card_separater">
+                            <div class="student_review">
+                                <p>Teachers at 7wiseways were really helpful and had a very broken down the information and smooth way of
+                                    teaching all the
+                                    topics</p>
+                                <div class="_rating mt-4">
+                                    <ul>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li class="_reting_count">4.5</li>
+                                        <li>98.4% CBSE XII</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="testimonial-card mt-5">
+                            <div class="student_details mb-4">
+                                <div class="student_img">
+                                    <img src="assets/images/student.jpg" alt="student" class="img-fluid">
+                                </div>
+                                <div class="student_name">
+                                    <div class="S_name">
+                                        Prisha, srivastav
+                                    </div>
+                                    <div class="S_location">
+                                        Jaipur, Rajasthan
+                                    </div>
+                                    <div class="S_percent">
+                                        98.4% CBSE XII
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="card_separater">
+                            <div class="student_review">
+                                <p>Teachers at 7wiseways were really helpful and had a very broken down the information and smooth way of
+                                    teaching all the
+                                    topics</p>
+                                <div class="_rating mt-4">
+                                    <ul>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li class="_reting_count">4.5</li>
+                                        <li>98.4% CBSE XII</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="testimonial-card mt-5">
+                            <div class="student_details mb-4">
+                                <div class="student_img">
+                                    <img src="assets/images/student.jpg" alt="student" class="img-fluid">
+                                </div>
+                                <div class="student_name">
+                                    <div class="S_name">
+                                        Prisha, srivastav
+                                    </div>
+                                    <div class="S_location">
+                                        Jaipur, Rajasthan
+                                    </div>
+                                    <div class="S_percent">
+                                        98.4% CBSE XII
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="card_separater">
+                            <div class="student_review">
+                                <p>Teachers at 7wiseways were really helpful and had a very broken down the information and smooth way of
+                                    teaching all the
+                                    topics</p>
+                                <div class="_rating mt-4">
+                                    <ul>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li><i class="far fa-star"></i></li>
+                                        <li class="_reting_count">4.5</li>
+                                        <li>98.4% CBSE XII</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- End testimonial -->
+    <!-- Start Footer -->
+    <footer class=" footer pt-5">
+        <div class="container">
+            <div class="row">       
+                <div class="col-md-4">
+                    <div class="footer-logo mb-5 ">
+                        <img src="assets/images/riforma.svg" alt="logo" class="img-fluid">
+                    </div> 
+                    <div class="about-riforma">
+                        <p >
+                            7Wiseways is an online tutoring platform with qualified teachers from top IB Schools across the globe. We provide live
+                            One-on-One classes, which take place in our online classroom using online video chat and a shared whiteboard. The
+                            teacher and the student can interact with each other through the video chat and write on the shared whiteboard.
+                        </p>
+                        <p>7Wiseways gives you access to the best teachers in the world, without any constraints on geography. Once you request a
+                        lesson, we will match you to a highly qualified personal tutor, who will take the first lesson. Once you are satisfied
+                        with the first lesson, your dedicated academic counselor will chart a detailed academic plan, tailor-made for you.</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="footer-link mt-4">
+                        <h6 class="footer-link-underline">Quick Links :</h6>
+                        <ul class="nav flex-column mt-5">
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Home</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Courses</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">About Us</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">How It Works</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Blogs</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Testimonials</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Become a Tutor</a></li>
+                            <li class="nav-item mb-3"><a href="#" class="nav-link p-0 ">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="footer-link mt-4">
+                        <h6 class="footer-link-underline">Get in Touch :</h6>
+                        <ul class="nav flex-column contact-info mt-5">
+                            <li class="nav-item mb-3">
+                                <a href="tel:(+91 7349732245)">+91 7349732245</a>
+                            </li>
+                            <li class="nav-item mb-3"><a href="mailto:" class="nav-link p-0 ">support@playing11.com</a></li>
+                            <li class="nav-item mb-3">
+                                <ul class="social_icon mt-">
+                                   <li><a href="#"><img src="assets/images/facebook.png" alt="facebook" class="img-fluid"></a></li>
+                                   <li><a href="#"><img src="" alt=""><img src="assets/images/instagram.png" alt="instagram" class="img-fluid"></a></li>
+                                   <li><a href="#"><img src="" alt=""><img src="assets/images/twitter.png" alt="twitter" class="img-fluid"></a></li>
+                                   <li><a href="#"><img src="" alt=""><img src="assets/images/linkedin.png" alt="linkedin" class="img-fluid"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </d iv> 
+            </div>
+        </div>
+        <div class="footer_bottom-block">
+            <div class="row">
+              
+                <div class="col-md-6 align-self-center  ">
+                    <ul class="d-flex p-0 mb-0">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="copyright">
+                        <p class="text-white mb-0">Riforma Technologies Pvt. Ltd. ©2021. All rights reserved</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- scripts-->
+        <script src="assets/js/jquery-3.6.0.js"></script>
+        <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/slick-slider/slick.min.js"></script>
+    <script src="assets/js/script.js"></script> 
+</body>
+</html>
